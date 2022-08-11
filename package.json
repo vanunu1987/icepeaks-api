@@ -1,0 +1,35 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanunu1987/ice-peaks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanunu1987/ice-peaks/issues"
+  },
+  "homepage": "https://github.com/vanunu1987/ice-peaks#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "config": "^1.26.2",
+    "cors": "^2.8.5",
+    "express": "^4.15.3",
+    "express-jwt": "^7.7.5",
+    "express-openid-connect": "^2.8.0",
+    "jwks-rsa": "^2.1.4",
+    "mongoose": "^6.4.6",
+    "mongoose-paginate": "^5.0.3",
+    "morgan": "^1.8.2",
+    "pow-mongodb-fixtures": "^0.14.0",
+    "qrcode": "^1.5.1",
+    "uuid": "^8.3.2"
+  }
+}
