@@ -25,7 +25,7 @@ const jwtCheck = jwt({
 
 const app = express();
 app.use(cors({
-    origin: ['http://localhost:3000','https://ccb5-46-117-129-194.ngrok.io'],
+    origin: ['http://localhost:3000','https://www.icepeaks.link'],
     credentials: true
 }));
 app.use(bodyParser.urlencoded({ extended: true }));
