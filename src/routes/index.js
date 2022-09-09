@@ -7,11 +7,19 @@ const routes  = express.Router({ mergeParams: true });
 
 routes.route('/')
   .get(campaign.list)
-  .post(campaign.create);
+  .post(campaign.create)
+  .put(campaign.update)
 
+  
+routes.route('/auto-complate')
+  .get(campaign.search)
+  
 routes.route('/:id')
   .get(campaign.read)
-  .put(campaign.update)
+
+routes.route('/:ids')
   .delete(campaign.delete);
+
+
 
 module.exports = routes;

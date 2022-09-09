@@ -14,5 +14,12 @@ module.exports = {
   pagination: {
     defaultPage: 1,
     defaultLimit: 10
+  },
+  dateOptions: {
+    year: 'numeric', 
+    month: 'numeric', 
+    day: 'numeric', 
+    hour: 'numeric', 
+    minute:  'numeric' 
   }
 };

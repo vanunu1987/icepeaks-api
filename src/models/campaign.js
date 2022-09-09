@@ -26,6 +26,14 @@ const CampaignSchema = new Schema({
   created_at: {
     type: Date,
     required: true 
+  },
+  update_at: {
+    type: Number,
+    required: false
+  },
+  update_by: {
+    type: String,
+    required: false
   }
 });
 
