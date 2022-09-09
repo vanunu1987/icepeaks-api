@@ -28,7 +28,7 @@ const { auth } = require('express-oauth2-jwt-bearer');
 
 const app = express();
 app.use(cors({
-    origin: ['http://localhost:3000','https://www.icepeaks.link/'],
+    origin: ['http://localhost:3000','https://www.icepeaks.link'],
     credentials: true
 }));
 app.use(bodyParser.urlencoded({ extended: true }));
