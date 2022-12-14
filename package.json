@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/vanunu1987/ice-peaks#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "body-parser": "^1.17.2",
     "config": "^1.26.2",
     "cors": "^2.8.5",

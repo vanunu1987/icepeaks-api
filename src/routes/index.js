@@ -10,6 +10,8 @@ routes.route('/')
   .post(campaign.create)
   .put(campaign.update)
 
+routes.route('/role')
+  .get(campaign.role)
   
 routes.route('/auto-complate')
   .get(campaign.search)

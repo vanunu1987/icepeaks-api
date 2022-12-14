@@ -4,6 +4,7 @@ const request = require('../helpers/request');
 const pagination = require('../helpers/pagination');
 const { createDocs } = require('../helpers/createCampaign')
 const QRCode = require('qrcode')
+const Axios = require('axios')
 
 const Campaign = mongoose.model('Campaign');
 
@@ -80,11 +81,29 @@ exports.search = async (req, res) => {
   try {
     const { query } = req;
     const searchQuery = Object.entries(query).reduce((acc,[key, value]) => {
-      acc[key] = new RegExp(value)
-      return acc
+      switch(key) {
+        case 'limit':
+          return acc
+        case 'uuid':
+          acc[key] = new RegExp(value)
+          return acc
+        default:
+          acc[key] = value
+          return acc
+      }
     }, {})
-    const campainList = await Campaign.find({...searchQuery});
+    const campainList = await Campaign.find({...searchQuery})
+      .limit(query.limit);
     return response.sendOk(res, campainList)
   } catch(error) {
+  }
+}
+
+exports.role = async (req, res) => {
+  try {
+    const result = await Axios.get('https://dev-3ibaojjd.us.auth0.com/api/v2/users/vanunu24%40gmail.com/roles')
+    return response.sendOk(res, result)
+  } catch(error) {
+    
   }
 }
